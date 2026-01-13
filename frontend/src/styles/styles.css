@@ -1,0 +1,109 @@
+div {
+  text-align: center;
+}
+
+p {
+  font-size: 1.2rem;
+  margin: 0.2rem 0;
+}
+
+input,
+button {
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+input {
+  margin-right: 1vw;
+}
+
+.country-emoji {
+  margin-top: 1vw;
+  margin-bottom: -1vw;
+  font-size: 10vh;
+}
+
+.flag-city-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city {
+  font-weight: bold;
+}
+
+.weather-entry {
+  width: fit-content;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.input-elements {
+  display: flex;
+  justify-content: center;
+  margin-top: 3vh;
+  gap: 0.5rem;
+}
+
+.all-entries {
+  margin: 4vh 0 2vh 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1vw;
+}
+
+.no-items-message {
+  border: 1px solid black;
+  width: 20vw;
+}
+
+.delete-button {
+  font-size: 0.7rem;
+}
+
+.error-p {
+  color: #e80505;
+  font-weight: bold;
+  margin-top: 2.5vh;
+}
+
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.toggle-buttons button {
+  background: none;
+  border: none;
+  color: black;
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.toggle-buttons button.active {
+  font-weight: bold;
+  border-bottom: 2px solid black;
+}
+
+.toggle-buttons button:not(.active):hover {
+  color: #555;
+}
+
+.logged-out-div {
+  margin-top: 22.5vh;
+  padding: 5vh;
+}
