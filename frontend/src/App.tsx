@@ -293,7 +293,6 @@ function App() {
         setError("⚠️ Error : City or CountryCode input could be incorrect ⚠️");
         return;
       }
-
       const responseOk = await postEntry(cityInput, countryCodeInput, token);
 
       if (!responseOk) {

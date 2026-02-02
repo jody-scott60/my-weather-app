@@ -8,19 +8,19 @@ const postWeather = async (req, res) => {
       countryCode: countryCode,
       user: req.userId,
     });
-    if (!alreadyExists) {
-      return res.status(400);
+    if (alreadyExists) {
+      return res.sendStatus(400);
     }
     await WeatherEntry.create({
       city: city,
       countryCode: countryCode,
       user: req.userId,
     });
-    res.status(200);
+    res.sendStatus(200);
     console.log("Created: ", city, countryCode);
   } catch (error) {
     console.error(error);
-    res.status(500);
+    res.sendStatus(500);
   }
 };
 
@@ -31,7 +31,7 @@ const getWeather = async (req, res) => {
     console.log(result);
   } catch (error) {
     console.error(error);
-    res.status(500);
+    res.sendStatustatus(500);
   }
 };
 
@@ -43,11 +43,11 @@ const deleteWeather = async (req, res) => {
       countryCode: countryCode,
       user: req.userId,
     });
-    res.status(200);
+    res.sendStatus(200);
     console.log(result);
   } catch (error) {
     console.error(error);
-    res.status(500);
+    res.sendStatus(500);
   }
 };
 
